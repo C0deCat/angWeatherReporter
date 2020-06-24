@@ -1,0 +1,10 @@
+.icon {
+    float: left;
+    margin: 1rem 1rem 0rem 1rem
+}
+.date {
+    font-size: 1.5em;
+}
+.badge {
+    font-size: 0.9em;
+}

@@ -8,11 +8,14 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./weather-report.component.css']
 })
 export class WeatherReportComponent implements OnInit {
+  report:any;
   imgUrl = environment.imgUrl;
   constructor(public fc: ForecastService) {}
 
   ngOnInit(): void {
-    this.fc.Update();
+    this.fc.Update().subscribe((data) => {
+      this.report = data;
+    });
   }
 
 }

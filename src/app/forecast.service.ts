@@ -11,12 +11,8 @@ export class ForecastService {
   response: any;
   constructor(private http: HttpClient) { }
 
-  Update(): void {
-    this.http.get(environment.apiUrl + "onecall?lat=54.215211&lon=45.113163&exclude=minutely&units=metric&lang=ru&appid=" + environment.apiKey)
-    .subscribe((response) => {
-      this.response = response;
-      console.log(this.response);
-    })
+  Update(): Observable<any> {
+    return this.http.get(environment.apiUrl + "onecall?lat=54.215211&lon=45.113163&exclude=minutely&units=metric&lang=ru&appid=" + environment.apiKey)
   }
 
 }

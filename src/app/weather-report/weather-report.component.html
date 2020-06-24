@@ -1,4 +1,7 @@
-<p>{{ fc.response.lat }}, {{ fc.response.lon }}</p>
-<p>{{ fc.response.current.weather[0].description }}</p>
-<p>{{ fc.response.current.dt*1000|date:'d/M/yyyy, H:mm' }}</p>
-<img src='{{ imgUrl }}/{{ fc.response.current.weather[0].icon}}@2x.png'>
+<div class="container-fluid">
+    <div class="row">
+        <app-current-weather class="col-sm" [current]="report.current">
+        </app-current-weather>
+    </div>
+</div>
+
