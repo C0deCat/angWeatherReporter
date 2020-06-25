@@ -1,7 +1,9 @@
 <div class="container-fluid">
     <div class="row">
-        <app-current-weather class="col-sm" [current]="report.current">
+        <app-current-weather class="col-12 col-sm-12 col-md-4 col-lg-3 mb-3" [current]="report.current">
         </app-current-weather>
+        <app-weeklyweather class="col mb-3" [daily]="report.daily">
+        </app-weeklyweather>
     </div>
 </div>
 

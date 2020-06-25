@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Input } from '@angular/core';
+import { NumberSymbol } from '@angular/common';
 
 @Component({
   selector: 'app-current-weather',
@@ -9,10 +10,12 @@ import { Input } from '@angular/core';
 })
 export class CurrentWeatherComponent implements OnInit {
   @Input() current;
+  today: number;
   imgUrl = environment.imgUrl;
   constructor() { }
 
   ngOnInit(): void {
+    this.today = this.current.dt;
   }
 
 }
