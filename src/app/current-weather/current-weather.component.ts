@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Input } from '@angular/core';
-import { NumberSymbol } from '@angular/common';
 
 @Component({
   selector: 'app-current-weather',

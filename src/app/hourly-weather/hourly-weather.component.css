@@ -1,0 +1,13 @@
+.weathercontainer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.date {
+    font-size: 1.2em;
+}
+
+.icon {
+    width: 64px;
+}

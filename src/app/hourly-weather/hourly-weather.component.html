@@ -1,0 +1,7 @@
+<div class="weathercontainer">
+    <div *ngFor="let hour of hourly.slice(0, 24)" class="mb-2">
+        <p class="bg-dark text-white font-weight-bold m-0">{{hour.dt * 1000|date:'H:mm'}}</p>
+        <img src="{{imgUrl+hour.weather[0].icon}}@2x.png" class="icon m-0">
+        <p class="bg-warning m-0">{{hour.temp|number:"1.0-1"}}&deg;C</p>
+    </div>
+</div>

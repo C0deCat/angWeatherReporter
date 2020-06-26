@@ -2,6 +2,9 @@
     <div class="row">
         <app-current-weather class="col-12 col-sm-12 col-md-4 col-lg-3 mb-3" [current]="report.current">
         </app-current-weather>
+        <app-hourly-weather [hourly]="report.hourly" class="col"></app-hourly-weather>
+    </div>
+    <div class="row">
         <app-weeklyweather class="col mb-3" [daily]="report.daily">
         </app-weeklyweather>
     </div>

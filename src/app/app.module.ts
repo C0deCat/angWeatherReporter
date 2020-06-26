@@ -7,6 +7,7 @@ import { WeatherReportComponent } from './weather-report/weather-report.componen
 import { AppheaderComponent } from './appheader/appheader.component';
 import { CurrentWeatherComponent } from './current-weather/current-weather.component';
 import { WeeklyweatherComponent } from './weeklyweather/weeklyweather.component';
+import { HourlyWeatherComponent } from './hourly-weather/hourly-weather.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { WeeklyweatherComponent } from './weeklyweather/weeklyweather.component'
     AppheaderComponent,
     CurrentWeatherComponent,
     WeeklyweatherComponent,
+    HourlyWeatherComponent,
   ],
   imports: [
     BrowserModule,
