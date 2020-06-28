@@ -10,10 +10,20 @@ import { Input } from '@angular/core';
 export class WeeklyweatherComponent implements OnInit {
   @Input() daily;
   imgUrl = environment.imgUrl;
+  selectedDay: any;
+  
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSelect(day): void {
+    this.selectedDay = day;
+  }
+
+  onDeselect(): void {
+    this.selectedDay = null;
   }
 
 }

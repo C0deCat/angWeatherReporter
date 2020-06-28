@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { resolve } from 'dns';
 import { getLocaleDateFormat } from '@angular/common';
 
 @Injectable({

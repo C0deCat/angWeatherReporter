@@ -7,3 +7,12 @@
 .date {
     font-size: 1.2em;
 }
+
+.singleDay {
+    cursor: pointer;
+}
+
+.singleDay:hover img {
+    background-color: #ffc107;
+    transition: all 0.2s;
+}

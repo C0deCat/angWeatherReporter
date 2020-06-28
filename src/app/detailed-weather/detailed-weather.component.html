@@ -1,0 +1,17 @@
+<div class="border border-warning rounded-lg detailed" (click)="deselect.emit()">
+    <img src="{{imgUrl+day.weather[0].icon}}@2x.png" class="icon border border-info rounded-circle bg-white">
+    <p class="bg-dark text-white font-weight-bold date p-2 mb-0">{{day.dt*1000|date:"d/MM"}}</p>
+    <p class="bg-warning mb-0 p-2 temp">Макс. {{day.temp.max|number:"1.0-1"}}&deg;C</p>
+    <p class="bg-info p-1 mb-0 temp">Мин. {{day.temp.min|number:"1.0-1"}}&deg;C</p>
+    <span class="badge badge-primary m-2" *ngFor="let w of day.weather">{{w.description}}</span>
+    <hr class="m-0">
+    <span class="badge badge-secondary m-2">Утром {{day.temp.morn|number:"1.0-1"}}&deg;C</span>
+    <span class="badge badge-secondary m-2">Днем {{day.temp.day|number:"1.0-1"}}&deg;C</span>
+    <span class="badge badge-secondary m-2">Вечером {{day.temp.eve|number:"1.0-1"}}&deg;C</span>
+    <span class="badge badge-secondary m-2">Ночью {{day.temp.night|number:"1.0-1"}}&deg;C</span>
+    <hr class="m-0">
+    <span class="badge badge-secondary m-2">Влажность {{day.humidity}}%</span>
+    <span class="badge badge-secondary m-2">Давление {{ day.pressure/1.333|number:"1.0-1" }} мм. рт. ст.</span>
+    <span class="badge badge-secondary m-2">Ветер {{day.wind_speed}} м/c</span>
+    <span class="badge badge-secondary m-2">УФИ: {{ day.uvi }}</span>
+</div>
