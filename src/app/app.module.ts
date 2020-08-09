@@ -9,6 +9,9 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 import { WeeklyweatherComponent } from './weeklyweather/weeklyweather.component';
 import { HourlyWeatherComponent } from './hourly-weather/hourly-weather.component';
 import { DetailedWeatherComponent } from './detailed-weather/detailed-weather.component';
+import { TemperaturePipe } from './temperature.pipe';
+import { TimePipe } from './time.pipe';
+import { PressurePipe } from './pressure.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { DetailedWeatherComponent } from './detailed-weather/detailed-weather.co
     WeeklyweatherComponent,
     HourlyWeatherComponent,
     DetailedWeatherComponent,
+    TemperaturePipe,
+    TimePipe,
+    PressurePipe,
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,12 @@
 <div class="border border-warning rounded-lg">
     <img src="{{imgUrl+current.weather[0].icon}}@2x.png" class="icon border border-info rounded-circle bg-white">
-    <p class="bg-dark text-white font-weight-bold date p-2 mb-0">{{current.dt*1000|date:"d/MM H:mm"}} | Сейчас</p>
-    <p class="bg-warning mb-0 p-2 temp">{{current.temp|number:"1.0-1"}}&deg;C</p>
-    <p class="bg-light text-muted p-1 mb-0 temp">Ощущается как {{current.feels_like|number:"1.0-1"}}&deg;C</p>
+    <p class="bg-dark text-white font-weight-bold date p-2 mb-0">{{current.dt|toMilliseconds|date:"d/MM H:mm"}} | Сейчас</p>
+    <p class="bg-warning mb-0 p-2 temp">{{current.temp|temperature}}&deg;C</p>
+    <p class="bg-light text-muted p-1 mb-0 temp">Ощущается как {{current.feels_like|temperature}}&deg;C</p>
     <span class="badge badge-primary m-2" *ngFor="let w of current.weather">{{w.description}}</span>
     <hr class="m-0">
     <span class="badge badge-secondary m-2">Влажность {{current.humidity}}%</span>
-    <span class="badge badge-secondary m-2">Давление {{ current.pressure/1.333|number:"1.0-1" }} мм. рт. ст.</span>
+    <span class="badge badge-secondary m-2">Давление {{ current.pressure|pressure }} мм. рт. ст.</span>
     <span class="badge badge-secondary m-2">Ветер {{current.wind_speed}} м/c</span>
     <span class="badge badge-secondary m-2">УФИ: {{ current.uvi }}</span>
 </div>

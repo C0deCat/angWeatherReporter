@@ -11,7 +11,7 @@ import { GeodataService } from '../geodata.service';
 export class WeatherReportComponent implements OnInit {
   report:any;
   imgUrl = environment.imgUrl;
-  constructor(public fc: ForecastService,
+  constructor(private fc: ForecastService,
     private geo: GeodataService) {}
 
   ngOnInit(): void {

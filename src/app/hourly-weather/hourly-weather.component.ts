@@ -8,7 +8,11 @@ import { Input } from '@angular/core';
   styleUrls: ['./hourly-weather.component.css']
 })
 export class HourlyWeatherComponent implements OnInit {
-  @Input() hourly;
+  public hours: any;
+  @Input() 
+  get hourly() { return this.hours; }
+  set hourly(arr) { this.hours = arr.slice(0, 24); }
+
   imgUrl = environment.imgUrl;
   
   constructor() { }

@@ -3,10 +3,10 @@
             <div *ngIf="selectedDay != day; then thenBlock else elseBlock"></div>
             <ng-template #thenBlock>
                 <div class="border border-warning m-1 rounded-lg singleDay"  (click) = "onSelect(day)">
-                    <p class="date bg-dark text-white font-weight-bold p-1 m-0">{{day.dt*1000|date:"d/MM"}}</p>
+                    <p class="date bg-dark text-white font-weight-bold p-1 m-0">{{day.dt|toMilliseconds|date:"d/MM"}}</p>
                     <img src="{{imgUrl+day.weather[0].icon}}@2x.png" class="m-0">
-                    <p class="bg-warning m-0 p-1">{{day.temp.max|number:"1.0-1"}}&deg;C</p>
-                    <p class="bg-info m-0 p-1">{{day.temp.min|number:"1.0-1"}}&deg;C</p>
+                    <p class="bg-warning m-0 p-1">{{day.temp.max|temperature}}&deg;C</p>
+                    <p class="bg-info m-0 p-1">{{day.temp.min|temperature}}&deg;C</p>
                 </div>
             </ng-template>
             <ng-template #elseBlock>
